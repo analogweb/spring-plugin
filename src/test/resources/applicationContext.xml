@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd"> 
+<beans> 
+   <bean id="foo" class="org.analogweb.spring.pojo.Foo" />
+   <bean id="fooImpl" class="org.analogweb.spring.pojo.FooImpl" />
+   <bean id="otherFooImpl" class="org.analogweb.spring.pojo.OtherFooImpl" />
+   <bean id="bar" class="org.analogweb.spring.pojo.Bar" />
+</beans>
