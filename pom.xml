@@ -72,19 +72,18 @@
 		<dependency>
 			<groupId>org.analogweb</groupId>
 			<artifactId>analogweb-core</artifactId>
-			<version>0.6.0</version>
-			<optional>true</optional>
+			<version>0.7.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>3.0.6.RELEASE</version>
+			<version>3.1.0.RELEASE</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>3.0.6.RELEASE</version>
+			<version>3.1.0.RELEASE</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -94,7 +93,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.0.6.RELEASE</version>
+			<version>3.1.0.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
