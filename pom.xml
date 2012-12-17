@@ -18,15 +18,15 @@
 	<groupId>org.analogweb</groupId>
 	<artifactId>analogweb-spring</artifactId>
 	<packaging>jar</packaging>
-	<version>0.7.0</version>
+	<version>0.7.0-SNAPSHOT</version>
 	<name>analogweb-spring</name>
 	<issueManagement />
 	<ciManagement />
 	<inceptionYear>2011</inceptionYear>
 	<contributors />
 	<scm>
-		<connection>scm:git:git@github.com/spring-plugin.git</connection>
-		<developerConnection>scm:git:git@github.com/spring-plugin.git</developerConnection>
+		<connection>scm:git:git@github.com:analogweb/spring-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com:analogweb/spring-plugin.git</developerConnection>
 	</scm>
 	<parent>
 		<groupId>org.analogweb</groupId>
