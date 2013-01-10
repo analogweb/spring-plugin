@@ -13,7 +13,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.analogweb.ApplicationContextResolver;
-import org.analogweb.core.ServletContextApplicationContextResolver;
+import org.analogweb.servlet.core.ServletContextApplicationContextResolver;
 import org.analogweb.spring.pojo.Bar;
 import org.analogweb.spring.pojo.Baz;
 import org.analogweb.spring.pojo.Foo;
