@@ -10,7 +10,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.analogweb.ApplicationContextResolver;
-import org.analogweb.exception.AssertionFailureException;
+import org.analogweb.core.AssertionFailureException;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
