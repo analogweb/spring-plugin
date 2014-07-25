@@ -12,8 +12,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import org.analogweb.ApplicationContextResolver;
-import org.analogweb.servlet.core.ServletContextApplicationContextResolver;
+import org.analogweb.servlet.core.ServletContextApplicationContext;
 import org.analogweb.spring.pojo.Bar;
 import org.analogweb.spring.pojo.Baz;
 import org.analogweb.spring.pojo.Foo;
@@ -36,7 +35,6 @@ public class SpringContainerAdaptorIntegrationTest {
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
-
     private SpringContainerAdaptor adaptor;
     private SpringContainerAdaptorFactory factory;
     private final String RESOURCE_BASE_PATH = "src/test/resources";
@@ -57,7 +55,7 @@ public class SpringContainerAdaptorIntegrationTest {
         context.setServletContext(mockServletContext);
         context.refresh();
         contextListener.contextInitialized(event);
-        ApplicationContextResolver resolver = new ServletContextApplicationContextResolver(
+        org.analogweb.ApplicationContext resolver = new ServletContextApplicationContext(
                 mockServletContext);
         adaptor = factory.createContainerAdaptor(resolver);
     }
@@ -79,7 +77,7 @@ public class SpringContainerAdaptorIntegrationTest {
     @Test
     public void testGetInstanceOfTypeWithoutApplicationContext() {
         ServletContext servletContext = mock(ServletContext.class);
-        ApplicationContextResolver resolver = new ServletContextApplicationContextResolver(
+        org.analogweb.ApplicationContext resolver = new ServletContextApplicationContext(
                 servletContext);
         adaptor = factory.createContainerAdaptor(resolver);
         // servletContext will contains nothing.
@@ -89,11 +87,9 @@ public class SpringContainerAdaptorIntegrationTest {
     @Test
     public void testGetInstancesOfType() {
         List<Foo> foo = adaptor.getInstancesOfType(Foo.class);
-
         assertThat(foo.size(), is(3));
         assertThat(foo.get(0), is(instanceOf(Foo.class)));
         assertThat(foo.get(1), is(instanceOf(Foo.class)));
         assertThat(foo.get(2), is(instanceOf(Foo.class)));
     }
-
 }

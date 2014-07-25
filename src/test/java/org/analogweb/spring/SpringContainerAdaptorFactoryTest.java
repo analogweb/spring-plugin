@@ -9,7 +9,6 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import org.analogweb.ApplicationContextResolver;
 import org.analogweb.core.AssertionFailureException;
 import org.junit.Before;
 import org.junit.Rule;
@@ -23,23 +22,22 @@ import org.springframework.context.ApplicationContext;
 public class SpringContainerAdaptorFactoryTest {
 
     private SpringContainerAdaptorFactory factory;
-    private ApplicationContextResolver resolver;
+    private org.analogweb.ApplicationContext resolver;
     private ApplicationContext app;
-
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
     @Before
     public void setUp() throws Exception {
         factory = new SpringContainerAdaptorFactory();
-        resolver = mock(ApplicationContextResolver.class);
+        resolver = mock(org.analogweb.ApplicationContext.class);
         app = mock(ApplicationContext.class);
     }
 
     @Test
     public void testCreateContainerAdaptor() {
         when(
-                resolver.resolve(ApplicationContext.class,
+                resolver.getAttribute(ApplicationContext.class,
                         SpringContainerAdaptorFactory.ROOT_APPLICATION_CONTEXT_KEY))
                 .thenReturn(app);
         SpringContainerAdaptor containerAdaptor = factory.createContainerAdaptor(resolver);
@@ -51,7 +49,7 @@ public class SpringContainerAdaptorFactoryTest {
     @Test
     public void testCreateContainerAdaptorWithoutContext() {
         when(
-                resolver.resolve(ApplicationContext.class,
+                resolver.getAttribute(ApplicationContext.class,
                         SpringContainerAdaptorFactory.ROOT_APPLICATION_CONTEXT_KEY)).thenReturn(
                 null);
         SpringContainerAdaptor containerAdaptor = factory.createContainerAdaptor(resolver);
@@ -63,5 +61,4 @@ public class SpringContainerAdaptorFactoryTest {
         thrown.expect(AssertionFailureException.class);
         factory.createContainerAdaptor(null);
     }
-
 }
