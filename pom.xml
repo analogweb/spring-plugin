@@ -33,8 +33,7 @@
 		<url>scm:git:git@github.com:analogweb/spring-plugin.git</url>
 		<connection>scm:git:git@github.com:analogweb/spring-plugin.git</connection>
 		<developerConnection>scm:git:git@github.com:analogweb/spring-plugin.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+    </scm>
 	<parent>
 		<groupId>org.analogweb</groupId>
 		<artifactId>analogweb-parent-modules</artifactId>
@@ -68,7 +67,7 @@
 		<dependency>
 			<groupId>org.analogweb</groupId>
 			<artifactId>analogweb-servlet</artifactId>
-			<version>0.9.1</version>
+			<version>0.9.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
