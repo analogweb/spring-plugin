@@ -51,7 +51,7 @@
 	<dependency>
 		<groupId>org.analogweb</groupId>
 		<artifactId>analogweb-core</artifactId>
-		<version>0.9.10</version>
+		<version>0.9.11</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -68,7 +68,7 @@
 	<dependency>
 		<groupId>org.analogweb</groupId>
 		<artifactId>analogweb-servlet</artifactId>
-		<version>0.9.10</version>
+		<version>0.9.11</version>
 		<scope>test</scope>
     </dependency>
 	<dependency>
